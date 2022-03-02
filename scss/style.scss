@@ -1,0 +1,703 @@
+@import 'mixin';
+@import 'variables';
+
+// Header Section Start
+.header{
+    width: 100%;position: relative;
+     box-shadow: 0px 3px 6px rgba(0,0,0,.4);background-color: $white-color;
+     z-index: 1; 
+    .nav-content{
+        @include flexbox;
+        .logo{
+            width: 28%; padding: 21px 0;
+            img{ width: 100%;}
+        }
+        .navbar{
+            width: 70%;
+            @include flexbox; justify-content: flex-end;
+            ul{
+                margin-bottom: 10px; padding: 10px 0 0 ;
+                li{
+                    display: inline-block; border-right: 1px solid $grey-color;cursor: pointer;
+                    a{
+                        font-size: .9rem;font-family: $lato-reg;
+                        text-decoration: none; color: $grey-color; padding: 0 8px;
+                        &:hover{color: $green-color;}
+                    }
+                    &:last-child{border-right: none;}
+
+
+                    .sm{font-size: .75rem;font-family: $fira-sans-bold;}
+                    .md{margin: 0 10px;font-size: .875rem;font-family: $fira-sans-bold;}
+                    .lg{font-size: 1rem;font-family: $fira-sans-bold;}
+                }
+            }
+            
+            .nav-top{
+                display: flex; align-items: center;
+                li:nth-child(n){
+                    border-right: none;
+                    &:nth-child(4), &:nth-child(5){padding :0 10px;
+                        border-right: 1px solid #265781;
+                        color: #505050;
+                    }
+
+                    &:last-child{
+                       button{background-color: transparent;border: none;cursor: pointer;}
+                       form{
+                           display: none;
+                       }
+                    }
+                    #lang{
+                        border: none;
+                        &:focus{outline: none;border: none;}
+                    }
+
+                }
+
+                li:nth-last-child(2){
+                    margin: 0 10px; border-right: 1px solid #265781; padding: 0 10px;
+                    .cir{
+                        width: 20px;height: 20px;border-radius: 50%;
+                        float: left;
+                    }
+                    .blue{background-color: #265781;}
+                    .green{background-color: #52B27B;margin: 0 10px;}
+                    .yellow{background-color: #F2E162;}
+                }
+                
+            }
+        }
+        #menu-btn{@include menu-btn;display: none;}
+    }
+}
+// Header Section End
+
+// Hero Banner Section Start
+.banner{
+    position: relative; width: 100%; 
+    img{max-width: 100%;position: relative;}
+    .content{
+        position: absolute;bottom: 100px;left: 100px;
+        width: 50%;
+        .headings{
+            font-family: $lato-bold; text-transform: uppercase;
+            h1{
+                color: $white-color; line-height: 3rem;background-color: #1B7642;
+                font-size: 3.5rem;float: left;padding: 10px;
+            }
+            h2{
+                clear: both;float: left;margin: 5px 0 30px;
+                color: $white-color;background-color: #0F5C30;font-size: 2.25rem; 
+                padding: 10px;
+            }
+        }
+        .more-btn{@include more-btn; }
+        
+    }
+}
+// Hero Banner Section End
+
+// Manage & Devlop Section Start
+.manage-dev{
+    padding: 80px 0 100px;background:linear-gradient(to bottom, #fff,#fff, #E6E6E6 );
+    .bg-txt{
+        @include flexbox;
+        width: 100%;
+        .head{
+            text-transform: uppercase; width: 70%;
+            h2{
+                color:$grey-color;font-size: 2.5rem;font-family: $lato-black; text-align: center;
+                &:last-child{text-align: right;}
+            }
+            h1{
+                font-size: 6.5rem;font-family:$archivo-Black;
+                background: url(../img/hero-banner.png) no-repeat center;
+                background-clip: text; -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;background-size: 100%;margin: 10px 0;
+            }
+        }
+        .mandal-logo{
+            width: 30%;
+            img{
+                max-width: 70%;
+            }
+        }
+    }
+
+    .category{
+        width: 100%;@include flexbox; padding-top: 80px; 
+        
+        .hydro{
+            width: 15%;text-align: center;
+            img{width: 50%;margin-bottom: 20px;}
+            h4{
+                font-size: 1.125rem;color: $grey-color;
+                font-family: $lato-black;text-transform: uppercase;
+                line-height: 25px;
+            }
+        }
+    }
+}
+// Manage & Devlop Section End
+
+//About VIDC Section Start
+.abt-VIDC{
+    width: 100%; height: 512px; position: relative; margin-bottom: 80px;
+    .bg-sec{
+       @include flexbox;height:100%; align-items: stretch;
+        img{width: 30%;}
+        .box{
+            width: 70%;background-color: #3F3531;
+        }
+    }
+
+    .VIDC-info{
+        width: 85%;position: absolute;height: 70%;
+        top: 16%;left: 8%;;bottom: 0;
+        @include flexbox;
+
+        .video{
+            width: 50%; padding: 0 15px;
+            figure{
+                width: 95%; cursor: pointer;
+                position: relative;
+                img{width: 100%;border-radius: 8px;}
+                figcaption{
+                    position: absolute;top: 40%;left: 40%;
+                    padding: 5px;border: 2px solid $green-color;border-radius: 50%;
+
+                    .fa-play{
+                        font-size: 2rem;color: $white-color;background-color:$green-color;
+                        padding: 20px;border-radius: 50%;
+                    }
+                }
+
+            }
+        }
+        .abt-info{
+            width: 50%;padding: 0 15px;
+
+            h3{
+                font-size: 2.25rem; color: $white-color;
+                font-family: $lato-black; margin-bottom: 20px;
+            }
+            p{
+                color: $white-color;font-size: 1rem;line-height: 25px;
+                margin-bottom: 20px;font-family: $lato-reg;text-align: justify
+            }
+            .more-btn{@include more-btn;background-color: $green-color;color: $white-color;}
+        }
+
+    }
+}
+//About VIDC Section End
+
+// Footer Section Start
+.footer{
+    width: 100%;background:grey url(../img/bg-foot.jpg) no-repeat;
+    background-size: cover;padding: 100px 0 50px; 
+
+    .foot-sec{
+        width: 100%;@include flexbox; align-items: stretch; padding-top: 60px;
+        h5{
+            font-size: 1.125rem;color: $white-color;font-family: $lato-bold;
+            margin-bottom: 20px;
+        }
+        .subscribe-block{
+            width: 70%;
+            @include flexbox;flex-direction: column; padding-right: 20px;
+            
+            form{
+                width: 93%;background-color: rgba(0,0,0,.2);padding: 5px 10px 5px 15px;
+                border-radius: 30px;@include flexbox; margin-bottom: 30px;
+                input{color: $white-color;font-size: 1rem;
+                    width: 70%;padding:10px 0;background-color: transparent;border: none;
+                    &::placeholder{color: $white-color;font-size: 1rem;}
+                    &:focus{border: none;outline: none;}
+                }
+                .sub-btn{
+                    width: 28%;background-color: $white-color;font-family: $sf-bold;
+                    font-size: 1rem;border: none; padding: 12px 20px;
+                    border-radius: 25px; text-transform: uppercase;
+                }
+            }
+
+            .link-sec{
+                width: 90%; padding-bottom: 30px;
+                @include flexbox;
+                .sec{
+                    &.about h5{text-transform: uppercase;}
+                    width: 32%;
+                    ul{
+                        li{
+                            margin-bottom: 10px;
+                            a{
+                                text-decoration: none; color: $white-color;
+                                font-size: .875rem;font-family: $sf-compact;
+                                padding-bottom: 10px;
+
+                                &:hover{text-decoration:underline;color:yellow;}
+                            }
+                        }
+                    }
+                }
+            }
+            .copyright{@include flexbox; @include copyright;} 
+        }
+
+        .contact-block{
+            width: 30%;background-color: rgba(0,0,0,.2);
+            padding: 20px;
+            h5{margin-bottom: 5px;}
+            .block{
+                @include flexbox;flex-wrap: nowrap;align-items: center; padding: 10px 0;
+                justify-content: flex-start; margin-bottom: 5px;
+                border-bottom: 1px solid rgba(255,255,255,.2);
+
+                div{
+                    margin-left: 15px;color:$white-color;font-family: $lato-reg;
+                    line-height: 20px;
+                    &>p{color: rgba(255,255,255,.5);}
+                }
+                
+                &>h5{
+                    border-right: 1px solid rgba(255,255,255,.2);
+                    padding-right: 15px;
+                }
+                .social{
+                    a{
+                        color: $white-color;margin: 5px 5px 0 5px;padding: 3px;
+                        font-size: 1.125rem;
+                        &:hover{color: yellow;}
+                    }
+                }
+                &:nth-child(3),&:nth-child(4){border: none;align-items: center;}
+            }
+        }
+        &>.copyright{@include copyright;display: none;}
+    }
+
+
+}
+// Footer Section End
+
+
+// Media Query
+
+
+@media screen and (max-width:1024px) {
+    // Header Section
+    .header .nav-content .navbar ul li a{padding:  0 6px}
+    // Hero Banner Section Start
+    .banner .content{
+       bottom: 70px;left: 70px;
+        .headings{
+            h1{line-height: 2.5rem;font-size: 3.25rem;}
+            h2{font-size: 2rem;}
+        }
+    }
+}
+
+@media screen and (max-width:991px) {
+    // Header Section
+    .header{
+        .nav-content{
+            justify-content: center;
+            .logo{width: 60%;}
+            .navbar{  justify-content: center;
+                width: 100%;
+            }
+        }
+    }
+    // Banner Section
+    .banner{
+        .content{
+            position: absolute;bottom: 50px;left: 100px;width: 70%;
+            .headings{
+                h1{line-height: 2rem;font-size: 2.25rem;padding: 10px;}
+                h2{margin: 5px 0 20px;font-size: 2rem;padding: 10px;}
+            }
+            .more-btn{font-size: 1.125rem;}  
+        }
+    }
+
+    // Manage & Develope Section
+    .manage-dev{padding: 50px 0;
+        .bg-txt{
+            @include flexbox;width: 100%;
+            .head{
+                text-transform: uppercase; width: 70%;
+                h2{font-size: 1.625rem;}
+                h1{ font-size: 4.5rem;}
+            } 
+        }
+        .category .hydro h4{font-size: 1rem;}   
+    }
+
+    // About VIDC Section
+    .abt-VIDC{
+         min-height: 600px; 
+        .bg-sec{
+            img{width: 100%;height: 50%;}
+            .box{ width: 100%;height:60%; }
+        }
+        .VIDC-info{
+            width: 100%; top: 0; left: 0;padding:20px 15px;
+
+            .video{width: 100%; 
+                figure{ width: 100%; text-align: center;
+                    img{width: 60%;}
+                    figcaption{
+                        top: 45%; left: 45%;
+                        .fa-play{font-size: 1.5rem; padding: 15px;}
+                    }
+                }
+            }
+            .abt-info{ width: 100%;padding: 0 10px; margin-top: 20px;
+                h3{font-size: 1.625rem;}
+                .more-btn{font-size: 1rem;}
+            }
+        }
+    }
+
+    // Footer Section
+    .footer{
+        width: 100%;padding: 150px 0  20px;
+        .foot-sec{
+            padding: 50px  15px 0;
+            h5{font-size: 1rem; margin-bottom: 20px;}
+            .subscribe-block{width: 100%; padding-right: 0px;        
+                form{
+                    width: 100%;padding: 5px 10px;
+                    input{font-size: .875rem;padding:5px 0;
+                        &::placeholder{font-size: .875rem;}
+                    }
+                    .sub-btn{font-size: .875rem;padding: 10px 0px;}
+                }
+    
+                .link-sec{
+                    width: 100%; padding-bottom: 30px;
+                    .sec{width: auto;}
+                }
+                .copyright{ display: none;} 
+            }
+            &>.copyright{display: flex;width: 100%;}
+    
+            .contact-block{
+                width: 100%;padding: 15px 20px; margin-bottom: 20px;
+                .block{
+                    .fas{font-size: 1.125rem;}
+                    div{margin-left: 15px;line-height: 25px;}
+                    
+                    &>h5{padding-right: 20px;font-size: 1rem}
+                }
+            }
+        }
+    
+    }
+}
+
+@media screen and (max-width:767px) {
+    // Header Section
+    .header{position: relative;
+        .nav-content{ overflow-x: hidden;
+            #menu-btn{@include menu-btn;display: flex;z-index: 999;margin-left: auto;}
+            .logo{width: 60%;}
+            .navbar{  
+                width: 100%;z-index: 99;background-color:rgba(0,0,0,1);display: none;
+                position: absolute; top: 100px; padding: 20px;
+                ul  li{
+                        display: block;margin: 0 0 15px 0;border-right: none;
+                        a{color: $white-color;padding: 0;}
+
+                        .fa-search{color: #265781;font-size: 1.25rem;}
+                        .sm,.md,.lg{color: $white-color;}
+                    }
+                
+                .nav-top{
+                    width: 48%;flex-direction: column;align-items: flex-start;
+                    li:nth-child(n){
+                        &:nth-child(4), &:nth-child(5)
+                        {padding :0px; border:none;}
+
+                        &:nth-last-child(2){
+                            margin: 0px; border: none; padding: 0 10px 0 0;
+                        }
+                        &:last-child{
+                            .btn{display: none;}
+                            margin-top: 10px;
+                           form{
+                               @include flexbox;align-items: center;
+                               display: block;
+                               input{display: none;}
+                               button{display:inline-flex;}  
+                            }
+                            .icon-search:before {
+                                content: "\e900";
+                                color: #fff; 
+                              }
+                        }
+                    }
+                }
+                .nav-bot{width: 48%;}  
+            }
+        }
+    }
+    // Banner Section
+    .banner{
+        .content{
+            bottom: 20px;left: 15px;width: 80%;
+            .headings{
+                h1{line-height: 1.5rem;font-size: 1.875rem;padding: 5px;}
+                h2{margin: 5px 0 10px;font-size: 1.5rem;padding: 5px;}
+            }
+            .more-btn{font-size: 1rem;padding: 8px;} 
+        }
+    }
+    // Manage & Develope Section
+    .manage-dev{
+        padding: 30px 0; overflow: hidden;
+        .bg-txt{
+            .head{
+                width: 100%; order: 2; 
+                h2{font-size: 1.25rem; text-align: left;
+                    // &:last-child{text-align: center;}
+                }
+                h1{ font-size: 4rem;padding-left: 30px;text-align: center;}
+            }
+            .mandal-logo{
+                width: 100%;order: 1;text-align: center;
+                img{width: 30%;}
+            }
+            
+        }
+        .category{
+            padding-top: 40px;
+            .hydro{
+                width: 33%; margin-bottom: 15px;
+                h4{font-size: .875rem;line-height: 1.125rem;}
+            }
+        }
+    }
+    // About VIDC Section
+    .abt-VIDC{
+        width: 100%; margin-bottom: 10px; min-height: 600px;
+        .bg-sec{text-align: center;
+            img{width: 100%;height: 40%;}
+            .box{ width: 100%;background-color: #3F3531;height:60%; }
+        }
+
+        .VIDC-info{
+            width: 100%;
+            .video{
+                width: 100%; 
+                figure{width: 100%;    
+                    img{width: 70%;}          
+                    figcaption{
+                        top: 40%; left: 43%;
+                        .fa-play{font-size: 1.25rem;}
+                    }
+                }
+            }
+            .abt-info{
+                h3{font-size: 1.375rem;margin :10px  0;}
+                p{ margin-bottom: 10px; }
+                .more-btn{font-size: .875rem;padding: 8px;}
+            }
+
+        }
+    }
+
+}
+
+@media screen and (max-width:640px){
+    .footer .foot-sec{
+        padding: 30px 0 0;
+        .subscribe-block{padding-right: 0;}
+            &>.copyright{
+            .sec1{width: 100%;}
+            .sec2{width:100%;text-align: left;}
+        }
+    }
+}
+
+@media screen and (max-width:575px) {
+    // Banner Section
+    .banner{
+        .content{bottom: 10px;
+            .headings{
+                h1{line-height: 1.25rem;font-size: 1.375rem;padding: 5px;}
+                h2{margin: 5px 0 10px;font-size: 1.125rem;padding: 5px;}
+            }
+            .more-btn{font-size: .75rem;padding: 5px;} 
+        }
+    }
+    // Manage & Develope Section
+    .manage-dev{padding: 20px 0;
+        .bg-txt{
+            .head{
+                width: 100%; order: 2; 
+                h2{font-size: 1.25rem; }
+                h1{ font-size: 2.825rem;}
+            }
+        }
+        .category{
+            padding-top: 40px;
+            .hydro{
+                img{width: 30%;}
+                width: 48%; margin-bottom: 20px;
+                h4{font-size: .8rem;line-height: 1rem;}
+            }
+        }
+    }
+    // About VIDC Section
+    .abt-VIDC{
+        width: 100%; margin-bottom: 10px; min-height: 650px;
+        .bg-sec{
+            img{width: 100%;height: 30%;}
+            .box{ width: 100%;background-color: #3F3531;height: 70%; }
+        }
+
+        .VIDC-info{
+            .video{
+                figure{width: 100%;text-align:center;  
+                    img{width: 90%;}            
+                    figcaption{
+                        .fa-play{font-size: 1.25rem;}
+                    }
+                }
+            }
+            .abt-info{
+                h3{font-size: 1.25rem;margin :10px  0;}
+                p{ margin-bottom: 10px; }
+                .more-btn{font-size: .75rem;padding: 8px;}
+            }
+
+        }
+    }
+    // Footer Section
+    .footer{    
+        .foot-sec{
+            h5{font-size: 1rem; margin-bottom: 20px;}
+            .subscribe-block{               
+                form{
+                    input{font-size: .875rem;padding:0px 0;width:60%;
+                        &::placeholder{font-size: .75rem;}
+                    }
+                    .sub-btn{width:35%;font-size: .75rem;padding: 9px 0px;}
+                }
+    
+                .link-sec{padding-bottom: 10px;
+                    .sec{width: 48%;margin-bottom: 10px;}
+                }
+            }    
+            .contact-block{
+                .block{
+                    div{margin-left: 15px;line-height: 25px;} 
+                    &>h5{padding-right: 20px;font-size: 1rem}
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:460px) {
+    // Header Section
+    .header{
+        .nav-content{
+            #menu-btn{@include menu-btn;display: flex;z-index: 999;margin-left: auto;}
+            .logo{width: 70%;}
+            .navbar{  
+                 top: 70px;
+                ul  li{
+                        display: block;margin: 0 0 10px 0;border-right: none;
+                        a{color: $white-color;}
+                    }
+                
+                .nav-top{
+                    width: 50%;flex-direction: column;align-items: flex-start;}
+                .nav-bot{width: 50%;}  
+            }
+        }
+    }
+    // Banner Section
+    .banner .content .headings{
+        h1{line-height: 1rem;font-size: 1.25rem;}
+        h2{margin: 5px 0 10px;font-size: 1rem;}
+    }
+     // Manage & Develope Section
+     .manage-dev{padding: 20px 0;
+        .bg-txt{
+            .head{
+                width: 100%; order: 2; 
+                h2{font-size: 1rem; }
+                h1{ font-size: 2.5rem;}
+            }
+        }
+        .category{
+            .hydro{
+                img{width: 25%;}
+                width: 49%; 
+            }
+        }
+    } 
+    // About VIDC Section
+    .abt-VIDC{ 
+        .VIDC-info{
+            padding: 15px 3px;
+            .video{padding-top: 25px;
+                figure{width: 100%;text-align:center;    
+                    img{width: 100%;}        
+                    figcaption{
+                        top: 35%;
+                        .fa-play{font-size: 1rem;padding: 12px;}
+                    }
+                }
+            }
+            .abt-info{margin-top: 10px;
+                h3{font-size: 1.25rem;margin :10px  0;}
+                p{ margin-bottom: 10px; font-size: .875rem;}
+                .more-btn{font-size: .75rem;padding: 8px;}
+            }
+
+        }
+    }
+
+    // Footer Section
+    .footer{    
+        .foot-sec{
+            .subscribe-block{               
+                form{
+                    input{font-size: .875rem;padding:0px 0;width:59%; }
+                    .sub-btn{width:38%;font-size: .7rem;padding: 9px 0px;}
+                }
+            }    
+        }
+    }
+}
+
+
+@media screen and (max-width:374px){
+    // About VIDC Section
+    .abt-VIDC{ 
+        .VIDC-info{
+            padding: 15px 3px;
+            .video{
+                padding-top: 30px;
+                figure{width: 100%;text-align:center;            
+                    figcaption{
+                        top: 35%;
+                        .fa-play{font-size: 1rem;padding: 12px;}
+                    }
+                }
+            }
+            .abt-info{
+                h3{font-size: 1.25rem;margin :10px  0;}
+                p{ margin-bottom: 10px; font-size: .875rem;}
+                .more-btn{font-size: .75rem;padding: 8px;}
+            }
+
+        }
+    }
+}

@@ -1,0 +1,87 @@
+// Reset Css
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}ol, ul {list-style: none;}blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: '';content: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+*, ::after, ::before{box-sizing: border-box;transition: .5s;}
+
+// Font-Face
+@font-face {
+    font-family: lato-regular;
+    src: url(../fonts/Lato-Regular.ttf);
+}
+@font-face {
+    font-family: lato-bold;
+    src: url(../fonts/Lato-Bold.ttf);
+}
+@font-face {
+    font-family: lato-black;
+    src: url(../fonts/Lato-Black.ttf);
+}
+@font-face {
+    font-family: lato-light;
+    src: url(../fonts/Lato-Light.ttf);
+}
+@font-face {
+    font-family: fira-sans-regular;
+    src: url(../fonts/FiraSans-Regular.ttf);
+}
+@font-face {
+    font-family: fira-sans-bold;
+    src: url(../fonts/FiraSans-Bold.ttf);
+}
+@font-face {
+    font-family: archivo-Black;
+    src: url(../fonts/ArchivoBlack-Regular.ttf);
+}
+@font-face {
+    font-family: sf-bold;
+    src: url(../fonts/sf-bold.ttf);
+}
+@font-face {
+    font-family: sf-compact;
+    src: url(../fonts/sf-compact.ttf);
+}
+
+//Base Css
+.container{
+    max-width: 1140px;margin: auto;padding: 0 15px;
+}
+.display{display: flex;}
+
+@mixin flexbox {
+    display: flex;justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@mixin more-btn {
+    display: block;clear: both;background-color: $white-color;font-size: 1.325rem;
+    font-family: $lato-reg;border: none;padding: 10px 20px; text-transform: uppercase;
+    cursor: pointer;
+    .fas{display: none}
+    &:hover .fas{display: inline-block;}
+}
+
+@mixin menu-btn {
+    background-color: $green-color;color: #feea00;font-size: 1.25rem;
+    padding: 5px 10px; align-self: center; border: none;
+    border-radius: 3px;cursor: pointer;
+
+    
+}
+
+@mixin copyright {
+    @include flexbox; 
+    h6, p{color: $white-color;font-family: $lato-bold;
+        font-size: .875rem;margin-bottom: 10px;line-height: 1rem;;
+    }
+    p{font-family: $lato-reg;}
+    .sec2{text-align: right;}
+}
+
+
