@@ -26,10 +26,12 @@
                     }
                     &:last-child{border-right: none;}
 
-
-                    .sm{font-size: .75rem;font-family: $fira-sans-bold;}
-                    .md{margin: 0 10px;font-size: .875rem;font-family: $fira-sans-bold;}
-                    .lg{font-size: 1rem;font-family: $fira-sans-bold;}
+                    .btn{background-color: transparent;border: none;
+                        font-family: $fira-sans-bold;color:#000; cursor: pointer;
+                    }
+                    .sm{font-size: .75rem;}
+                    .md{margin: 0 5px;font-size: .875rem;}
+                    .lg{font-size: 1rem;}
                 }
             }
             
@@ -69,6 +71,29 @@
             }
         }
         #menu-btn{@include menu-btn;display: none;}
+
+        .modal{
+            @include modal;
+            &-box{
+                @include modal-box; 
+            }
+            &-content{
+                @include modal-content;width:100%;
+                .form{
+                    width: 100%; display: flex; justify-content: space-between;
+                    gap: 20px;position: relative;
+                    #search-input{
+                        width: 100%;height: 50px;padding: 10px 100px 10px 20px;
+                        
+                    }
+                    #search-btn{
+                        background-color: transparent;padding: 10px;
+                        border: none;top: 8px;color: $black;
+                        position: absolute;right: 10px;cursor: pointer;
+                    }
+                }
+            }
+        }
     }
 }
 // Header Section End
@@ -76,7 +101,7 @@
 // Hero Banner Section Start
 .banner{
     position: relative; width: 100%; 
-    img{max-width: 100%;position: relative;}
+    img{width: 100%;position: relative;}
     .content{
         position: absolute;bottom: 100px;left: 100px;
         width: 50%;
@@ -93,7 +118,16 @@
             }
         }
         .more-btn{@include more-btn; }
-        
+    }
+    #scrollspy{
+        display: flex; justify-content: center; position: relative;
+        align-items: center; margin-top: -40px; transition: 1s;
+        .arrow{
+            background-color: #1B7642;padding: 20px 20px;
+            display: flex;justify-content: center;
+            text-decoration: none;color:$white-color;
+            .fa-solid{font-size: 2rem;}
+        }
     }
 }
 // Hero Banner Section End
@@ -174,6 +208,19 @@
                 }
 
             }
+            .modal{
+                @include modal;
+                &-box{
+                    @include modal-box;
+                }
+                &-content{
+                   @include modal-content;
+                    
+                }
+                .videoDisplay{
+                    width: 500px;height: 280px;
+                }
+            }
         }
         .abt-info{
             width: 50%;padding: 0 15px;
@@ -221,6 +268,7 @@
                     font-size: 1rem;border: none; padding: 12px 20px;
                     border-radius: 25px; text-transform: uppercase;
                 }
+                #error{color: #f00;display: block;margin-top: 5px;}
             }
 
             .link-sec{
@@ -297,6 +345,7 @@
             h2{font-size: 2rem;}
         }
     }
+
 }
 
 @media screen and (max-width:991px) {
@@ -307,6 +356,29 @@
             .logo{width: 60%;}
             .navbar{  justify-content: center;
                 width: 100%;
+            }
+
+            .modal{
+                @include modal;
+                &-box{
+                    @include modal-box; width: 75%;
+                }
+                &-content{
+                    @include modal-content;width:100%;
+                    .form{
+                        width: 100%; display: flex; justify-content: space-between;
+                        gap: 20px;position: relative;
+                        #search-input{
+                            width: 100%;height: 50px;padding: 10px 100px 10px 20px;
+                            
+                        }
+                        #search-btn{
+                            background-color: transparent;padding: 10px;
+                            border: none;top: 8px;color: $black;
+                            position: absolute;right: 10px;cursor: pointer;
+                        }
+                    }
+                }
             }
         }
     }
@@ -351,6 +423,22 @@
                     figcaption{
                         top: 45%; left: 45%;
                         .fa-play{font-size: 1.5rem; padding: 15px;}
+                    }
+                }
+                .modal{
+                    @include modal;
+                    &-box{
+                        @include modal-box;
+                    }
+                    &-content{
+                       @include modal-content;
+                       .head{
+                        .heading{font-size: 1.125rem;}
+                       }
+                        
+                    }
+                    .videoDisplay{
+                        width: 400px;height: 220px;
                     }
                 }
             }
@@ -425,14 +513,7 @@
                             margin: 0px; border: none; padding: 0 10px 0 0;
                         }
                         &:last-child{
-                            .btn{display: none;}
-                            margin-top: 10px;
-                           form{
-                               @include flexbox;align-items: center;
-                               display: block;
-                               input{display: none;}
-                               button{display:inline-flex;}  
-                            }
+                        margin-top: 10px;
                             .icon-search:before {
                                 content: "\e900";
                                 color: #fff; 
@@ -442,17 +523,49 @@
                 }
                 .nav-bot{width: 48%;}  
             }
+            .modal{
+                @include modal;
+                &-box{
+                    @include modal-box; width: 100%;
+                }
+                &-content{
+                    @include modal-content;width:100%;
+                    .form{
+                        width: 100%; display: flex; justify-content: space-between;
+                        gap: 20px;position: relative;
+                        #search-input{
+                            width: 100%;height: 50px;padding: 10px 100px 10px 20px;
+                            
+                        }
+                        #search-btn{
+                            background-color: transparent;padding: 10px;
+                            border: none;top: 8px;color: $black;
+                            position: absolute;right: 10px;cursor: pointer;
+                        }
+                    }
+                }
+            }
+
         }
     }
     // Banner Section
     .banner{
         .content{
-            bottom: 20px;left: 15px;width: 80%;
+            bottom: 50px;left: 15px;width: 80%;
             .headings{
                 h1{line-height: 1.5rem;font-size: 1.875rem;padding: 5px;}
                 h2{margin: 5px 0 10px;font-size: 1.5rem;padding: 5px;}
             }
             .more-btn{font-size: 1rem;padding: 8px;} 
+        }
+        #scrollspy{
+             margin-top: -30px; transition: 1s;
+             .arrow{
+                background-color: #1B7642;padding: 15px;
+                display: flex;justify-content: center;
+                text-decoration: none;color:$white-color;
+                .fa-solid{font-size: 1.5rem;}
+            }
         }
     }
     // Manage & Develope Section
@@ -499,6 +612,23 @@
                         .fa-play{font-size: 1.25rem;}
                     }
                 }
+                .modal{
+                    @include modal;
+                    &-box{
+                        @include modal-box;
+                    }
+                    &-content{
+                       @include modal-content;
+                       .head{
+                        .heading{font-size: 1rem;}
+                        .dismis{font-size: 1rem;}
+                       }
+                        
+                    }
+                    .videoDisplay{
+                        width: 400px;height: 220px;
+                    }
+                }
             }
             .abt-info{
                 h3{font-size: 1.375rem;margin :10px  0;}
@@ -525,13 +655,22 @@
 @media screen and (max-width:575px) {
     // Banner Section
     .banner{
-        .content{bottom: 10px;
+        .content{bottom: 40px;
             .headings{
                 h1{line-height: 1.25rem;font-size: 1.375rem;padding: 5px;}
                 h2{margin: 5px 0 10px;font-size: 1.125rem;padding: 5px;}
             }
             .more-btn{font-size: .75rem;padding: 5px;} 
         }
+        #scrollspy{
+            margin-top: -25px; transition: 1s;
+            .arrow{
+               background-color: #1B7642;padding: 10px;
+               display: flex;justify-content: center;
+               text-decoration: none;color:$white-color;
+               .fa-solid{font-size: 1.25rem;}
+           }
+       }
     }
     // Manage & Develope Section
     .manage-dev{padding: 20px 0;
@@ -565,6 +704,23 @@
                     img{width: 90%;}            
                     figcaption{
                         .fa-play{font-size: 1.25rem;}
+                    }
+                }
+                .modal{
+                    @include modal;
+                    &-box{
+                        @include modal-box;width: 75%;
+                    }
+                    &-content{
+                       @include modal-content; width: 100%;
+                       .head{
+                        .heading{font-size: 1rem;}
+                        .dismis{font-size: 1rem;}
+                       }
+                        
+                    }
+                    .videoDisplay{
+                        width: 360px;height: 170px;
                     }
                 }
             }
@@ -619,12 +775,55 @@
                     width: 50%;flex-direction: column;align-items: flex-start;}
                 .nav-bot{width: 50%;}  
             }
+
+            .modal{
+                @include modal;
+                &-box{
+                    @include modal-box; width: 100%;
+                }
+                &-content{
+                    @include modal-content;width:100%;
+                    .head{
+                        .heading{font-size: .875rem;}
+                        .dismis{font-size: .875rem;}
+                    }
+                    .form{
+                        width: 100%;
+                        gap: 15px;
+                        #search-input{
+                            width: 100%;height: 50px;padding: 10px 40px 10px 20px;
+                            
+                        }
+                        #search-btn{
+                            background-color: transparent;padding: 10px;
+                            border: none;top: 8px;color: $black;
+                            position: absolute;right: 10px;cursor: pointer;
+                        }
+                    }
+                }
+            }
         }
     }
     // Banner Section
-    .banner .content .headings{
-        h1{line-height: 1rem;font-size: 1.25rem;}
-        h2{margin: 5px 0 10px;font-size: 1rem;}
+    .banner{
+         .content{
+                bottom: 20px;
+             .headings{
+     
+                h1{line-height: 1rem;font-size: 1.125rem;}
+                h2{margin: 5px 0 10px;font-size: .875rem;}
+             }
+             .more-btn{padding: 3px;font-size: .7rem;}
+        } 
+         #scrollspy{
+            margin-top: -25px; transition: 1s;
+            .arrow{
+               background-color: #1B7642;padding: 10px;
+               display: flex;justify-content: center;
+               text-decoration: none;color:$white-color;
+               .fa-solid{font-size: 1rem;}
+           }
+       }
     }
      // Manage & Develope Section
      .manage-dev{padding: 20px 0;
@@ -689,6 +888,23 @@
                     figcaption{
                         top: 35%;
                         .fa-play{font-size: 1rem;padding: 12px;}
+                    }
+                }
+                .modal{
+                    @include modal;
+                    &-box{
+                        @include modal-box;width: 100%;
+                    }
+                    &-content{
+                       @include modal-content;width:100%;
+                       .head{
+                        .heading{font-size: .875rem;}
+                        .dismis{font-size: .875rem;}
+                       }
+                        
+                    }
+                    .videoDisplay{
+                        width: 240px;height: 130px;
                     }
                 }
             }

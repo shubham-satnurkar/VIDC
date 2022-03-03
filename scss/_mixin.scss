@@ -8,7 +8,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {line-height: 1;}ol, ul {list-style: none;}blockquote, q {quotes: none;}
 blockquote:before, blockquote:after, q:before, q:after {content: '';content: none;}
 table {border-collapse: collapse;border-spacing: 0;}
-*, ::after, ::before{box-sizing: border-box;transition: .5s;}
+*, ::after, ::before{box-sizing: border-box;}
 
 // Font-Face
 @font-face {
@@ -80,8 +80,37 @@ table {border-collapse: collapse;border-spacing: 0;}
     h6, p{color: $white-color;font-family: $lato-bold;
         font-size: .875rem;margin-bottom: 10px;line-height: 1rem;;
     }
-    p{font-family: $lato-reg;}
+    p{
+       .link{
+        font-family: $lato-reg;color: $white-color;text-decoration: none;
+        &:hover{color:#feea00;text-decoration: underline;}
+       }
+    }
     .sec2{text-align: right;}
 }
 
 
+
+@mixin modal {
+    width: 100%; position: fixed; top: 0;left:0;height: 100%;
+    background-color: rgba($black, .5); 
+    z-index: 1072; padding: 20px; display: none;
+}
+@mixin modal-box{
+    width: 50%;
+    display: flex;justify-content: space-between; flex-direction: column;
+    align-items: center;margin: -3rem auto 0;
+}
+@mixin modal-content{
+    // width: 100%;
+    background-color: $white-color;padding: 20px;
+    .head{
+        display: flex;justify-content: space-between;
+        align-items: center;  margin-bottom: 20px;
+        .heading{font-size: 1.25rem;}  
+        .dismis{
+            font-size: 1.25rem;background-color: transparent;
+            cursor: pointer;
+        }
+    }
+}

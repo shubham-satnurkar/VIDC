@@ -16,7 +16,7 @@
     <body>
         <!-- Header Section Start -->
         <header class="header">
-            <div class="container">
+            <div class="container" id="container">
                 <div class="nav-content">
                     <div class="logo">
                         <a href="index.html"><img src="img/logo.png" alt="logo-img"></a>
@@ -25,45 +25,63 @@
                         <i class="fas fa-bars"></i>
                     </button>
                     <nav class="navbar" id="navbar">
-                        <ul class="nav-top">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Tenders</a></li>
-                            <li><a href="#">Knowledge Center</a></li>
-                            <li>
-                                <span class="sm">A -</span>
-                                <span class="md">A </span>
-                                <span class="lg">A +</span>
+                        <ul class="nav nav-top">
+                            <li class="nav-item"><a href="javascript:void(0)" class="nav-link">About Us</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Tenders</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Knowledge Center</a></li>
+                            <li class="nav-item">
+                                <button type="button" onclick="sizeChange(.875)" class="sm btn">A -</button>
+                                <button type="button" onclick="sizeChange(1)" class="md btn">A </button>
+                                <button type="button" onclick="sizeChange(1.125)" class="lg btn">A +</button>
                             </li>
-                            <li>
+                            <li class="nav-item">
                                 <select name="lang" id="lang">
                                     <option value="English">EN</option>
                                     <option value="Hindi">HI</option>
                                     <option value="Marathi">MR</option>
                                 </select>
                             </li>
-                            <li>
+                            <li class="nav-item">
                                 <div class="cir blue"></div>
                                 <div class="cir green"></div>
                                 <div class="cir yellow"></div>
                             </li>
-                            <li>
-                               <button type="button" class="btn"><span class="icon-search"></span></button>
-                               <form>
+                            <li class="nav-item">
+                               <button type="button" class="btn" id="searchBtn"><span class="icon-search"></span></button>
+                               <!-- <form>
                                    <input type="search" placeholder="Search Here..." id="search-input">
                                    <button type="button" id="search-btn"><span class="icon-search"></span></button>
-                               </form>
+                               </form> -->
                             </li>
                         </ul>
     
-                        <ul class="nav-bot">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Annual Reports</a></li>
-                            <li><a href="#">Circulars</a></li>
-                            <li><a href="#">Disclosures</a></li>
-                            <li><a href="#">Governing Councils</a></li>
-                            <li><a href="#">Governing Councils Decisions</a></li>
+                        <ul class="nav nav-bot">
+                            <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Home</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Annual Reports</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Circulars</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Disclosures</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Governing Councils</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Governing Councils Decisions</a></li>
                         </ul>
                     </nav>
+
+                    <div class="modal" id="modal2">
+                        <div class="modal-box" id="formBox">
+                            <div class="modal-content">
+                                <div class="head">
+                                    <h4 class="heading">Search Here</h4>
+                                    <button class="dismis" id="close">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                </div>
+                                <form class="form">
+                                    <input type="search" placeholder="Search Here..." id="search-input">
+                                    <button type="submit" id="search-btn"><span class="icon-search"></span></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </header>
@@ -79,13 +97,17 @@
                         <h2>   Agricultural Irrigation</h2>
                     </div>
                     <button type="button" class="more-btn">Know More <i class="fas fa-long-arrow-alt-right"></i></button>
+                    
                 </div>
+            </div>
+            <div  id="scrollspy">
+                <a href="#manage-dev" class="arrow"><i class="fa-solid fa-chevron-down"></i></a>
             </div>
         </section>
         <!-- Hero Banner Section End -->
 
         <!-- Manage & Devlop Section Start -->
-        <section class="manage-dev">
+        <section class="manage-dev" id="manage-dev">
             <div class="container">
                 <div class="bg-txt">
                     <div class="head">
@@ -131,12 +153,25 @@
             </div>
             <div class="VIDC-info">
                 <div class="video">
-                   <figure>
-                       <img src="img/video-img.png" alt="video-img">
-                       <figcaption>
+                   <figure class="show-modal">
+                       <img src="img/video-img.png" alt="video-img" class="show-modal">
+                       <figcaption class="show-modal">
                             <i class="fas fa-play"></i>
                        </figcaption>
                    </figure>
+                   <div class="modal" id="modal">
+                       <div class="modal-box">
+                           <div class="modal-content">
+                               <div class="head">
+                                   <h4 class="heading">Information about VIDC</h4>
+                                   <button class="dismis" id="dismis">
+                                       <i class="fa-solid fa-xmark"></i>
+                                   </button>
+                               </div>
+                               <iframe class="videoDisplay" src="https://www.youtube.com/embed/fVQs4ge_EK0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                           </div>
+                       </div>
+                   </div>
                 </div>
                 <div class="abt-info">
                     <h3>About VIDC</h3>
@@ -155,9 +190,10 @@
                 <div class="foot-sec">
                     <div class="subscribe-block">
                         <h5>Subscribe to our Newsletters</h5>
-                        <form action="#">
-                            <input type="email" placeholder="Enter Email Id">
+                        <form class="form" onsubmit="return formValidate()" novalidate>
+                            <input type="email" placeholder="Enter Email Id" id="email" onblur="validate()">
                             <button type="submit" class="sub-btn">Subscribe Now</button>
+                            <span id="error" ></span>
                         </form>
                         <div class="link-sec">
                             <div class="sec about">
@@ -198,7 +234,7 @@
                             <div class="sec2">
                                 <h6>Powered by</h6>
                                 <p>
-                                    Webwerks Pvt Ltd
+                                    <a href="javascript:void(0)" class="link"> Webwerks Pvt Ltd</a>
                                 </p>
                             </div>
                         </div>
@@ -255,7 +291,7 @@
                         <div class="sec2">
                             <h6>Powered by</h6>
                             <p>
-                                Webwerks Pvt Ltd
+                               <a href="javascript:void(0)" class="link"> Webwerks Pvt Ltd</a>
                             </p>
                         </div>
                     </div>
@@ -266,6 +302,6 @@
 
 
         <script src="js/jquery.min.js"></script>
-        <script src="js/index.js"></script>
+        <script src="js/custom.js"></script>
     </body>
 </html>
