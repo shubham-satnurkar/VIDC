@@ -5,14 +5,17 @@ $(document).ready(function(){
     });
 
     $(window).resize(function(){
-        // if ($(this).width() >= 768) {
-        //     location.reload();
-        // }
-        if(window.innerWidth == 768 || window.innerWidth == 770)
-        location.reload();
+        if ($(this).width() < 768) {
+            $("#navbar").hide()
+        }
+        else{
+            $("#navbar").show()
+        }
+        if(window.innerWidth > 768)
+        $('.navbar').css('display', 'flex');
     });
 
-    // Scrollspy
+    // Scrollspy for page scroll dowon onclick arrow button
     var $scrollspy=$("#scrollspy");
     let $target =$("#manage-dev")
     function scrollToAnchor($arrow){
@@ -22,6 +25,9 @@ $(document).ready(function(){
     $scrollspy.click(function() {
        scrollToAnchor($target);
     });
+
+
+    
 
 
 
@@ -86,13 +92,35 @@ $(document).ready(function(){
             scrollTop: 0
           }, 1000)
         })
-
-
-
-
     
 });
 
+
+
+
+
+
+
+
+
+// Onclick event for font sizes increase and decrease
+$(document).ready(function(){
+    $(".sm").on('click', function(size){
+        $("html").animate({
+            'font-size': '14px'
+        })
+    })
+    $(".md").on('click', function(size){
+        $("html").animate({
+            'font-size': '16px'
+        })
+    })
+    $(".lg").on('click', function(size){
+        $("html").animate({
+            'font-size': '18px'
+        })
+    })
+})
 
 
 
