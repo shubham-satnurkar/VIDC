@@ -383,7 +383,7 @@ table {
 }
 
 .header .nav-content .modal-box {
-  width: 50%;
+  width: 75%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -401,6 +401,7 @@ table {
 }
 
 .header .nav-content .modal-content {
+  width: 100%;
   background-color: #fff;
   padding: 20px;
   width: 100%;
@@ -730,7 +731,7 @@ table {
 }
 
 .abt-VIDC .VIDC-info .video .modal-box {
-  width: 50%;
+  width: 75%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -748,8 +749,10 @@ table {
 }
 
 .abt-VIDC .VIDC-info .video .modal-content {
+  width: 100%;
   background-color: #fff;
   padding: 20px;
+  width: 100%;
 }
 
 .abt-VIDC .VIDC-info .video .modal-content .head {
@@ -776,7 +779,9 @@ table {
 }
 
 .abt-VIDC .VIDC-info .video .modal .videoDisplay {
-  width: 500px;
+  display: block;
+  margin: auto;
+  width: 100%;
   height: 280px;
 }
 
@@ -1113,6 +1118,29 @@ table {
   text-align: right;
 }
 
+.scroll-top-btn {
+  position: fixed;
+  right: -100px;
+  bottom: 20px;
+  background-color: #44af72;
+  padding: 10px 10px;
+  border-radius: 50%;
+  -webkit-transition: .5s;
+  transition: .5s;
+  z-index: 100000000;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+.scroll-top-btn .fa-solid {
+  font-size: 1.375rem;
+  color: #fff;
+}
+
+.scroll-top-btn.show {
+  right: 20px;
+}
+
 @media screen and (max-width: 1024px) {
   .header .nav-content .navbar ul li a {
     padding: 0 6px;
@@ -1157,7 +1185,7 @@ table {
     display: none;
   }
   .header .nav-content .modal-box {
-    width: 50%;
+    width: 75%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1175,6 +1203,7 @@ table {
     width: 75%;
   }
   .header .nav-content .modal-content {
+    width: 100%;
     background-color: #fff;
     padding: 20px;
     width: 100%;
@@ -1318,7 +1347,7 @@ table {
     display: none;
   }
   .abt-VIDC .VIDC-info .video .modal-box {
-    width: 50%;
+    width: 75%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1335,6 +1364,7 @@ table {
     margin: -3rem auto 0;
   }
   .abt-VIDC .VIDC-info .video .modal-content {
+    width: 100%;
     background-color: #fff;
     padding: 20px;
   }
@@ -1362,8 +1392,8 @@ table {
     font-size: 1.125rem;
   }
   .abt-VIDC .VIDC-info .video .modal .videoDisplay {
-    width: 400px;
-    height: 220px;
+    width: 100%;
+    height: 280px;
   }
   .abt-VIDC .VIDC-info .abt-info {
     width: 100%;
@@ -1541,7 +1571,7 @@ table {
     display: none;
   }
   .header .nav-content .modal-box {
-    width: 50%;
+    width: 75%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1559,6 +1589,7 @@ table {
     width: 100%;
   }
   .header .nav-content .modal-content {
+    width: 100%;
     background-color: #fff;
     padding: 20px;
     width: 100%;
@@ -1736,7 +1767,7 @@ table {
     display: none;
   }
   .abt-VIDC .VIDC-info .video .modal-box {
-    width: 50%;
+    width: 75%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1753,6 +1784,7 @@ table {
     margin: -3rem auto 0;
   }
   .abt-VIDC .VIDC-info .video .modal-content {
+    width: 100%;
     background-color: #fff;
     padding: 20px;
   }
@@ -1783,7 +1815,7 @@ table {
     font-size: 1rem;
   }
   .abt-VIDC .VIDC-info .video .modal .videoDisplay {
-    width: 400px;
+    width: 100%;
     height: 220px;
   }
   .abt-VIDC .VIDC-info .abt-info h3 {
@@ -1918,7 +1950,7 @@ table {
     display: none;
   }
   .abt-VIDC .VIDC-info .video .modal-box {
-    width: 50%;
+    width: 75%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1933,12 +1965,12 @@ table {
         -ms-flex-align: center;
             align-items: center;
     margin: -3rem auto 0;
-    width: 75%;
+    width: 90%;
   }
   .abt-VIDC .VIDC-info .video .modal-content {
+    width: 100%;
     background-color: #fff;
     padding: 20px;
-    width: 100%;
   }
   .abt-VIDC .VIDC-info .video .modal-content .head {
     display: -webkit-box;
@@ -1967,8 +1999,8 @@ table {
     font-size: 1rem;
   }
   .abt-VIDC .VIDC-info .video .modal .videoDisplay {
-    width: 360px;
-    height: 170px;
+    width: 100%;
+    height: 200px;
   }
   .abt-VIDC .VIDC-info .abt-info h3 {
     font-size: 1.25rem;
@@ -2080,7 +2112,7 @@ table {
     display: none;
   }
   .header .nav-content .modal-box {
-    width: 50%;
+    width: 75%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2098,6 +2130,7 @@ table {
     width: 100%;
   }
   .header .nav-content .modal-content {
+    width: 100%;
     background-color: #fff;
     padding: 20px;
     width: 100%;
@@ -2223,6 +2256,70 @@ table {
     font-size: 1rem;
     padding: 12px;
   }
+  .abt-VIDC .VIDC-info .video .modal {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1072;
+    padding: 20px;
+    display: none;
+  }
+  .abt-VIDC .VIDC-info .video .modal-box {
+    width: 75%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: -3rem auto 0;
+    width: 100%;
+  }
+  .abt-VIDC .VIDC-info .video .modal-content {
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+  }
+  .abt-VIDC .VIDC-info .video .modal-content .head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 20px;
+  }
+  .abt-VIDC .VIDC-info .video .modal-content .head .heading {
+    font-size: 1.25rem;
+  }
+  .abt-VIDC .VIDC-info .video .modal-content .head .dismis {
+    font-size: 1.25rem;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .abt-VIDC .VIDC-info .video .modal-content .head .heading {
+    font-size: 1rem;
+  }
+  .abt-VIDC .VIDC-info .video .modal-content .head .dismis {
+    font-size: 1rem;
+  }
+  .abt-VIDC .VIDC-info .video .modal .videoDisplay {
+    width: 100%;
+    height: 150px;
+  }
   .abt-VIDC .VIDC-info .abt-info {
     margin-top: 10px;
   }
@@ -2280,7 +2377,7 @@ table {
     display: none;
   }
   .abt-VIDC .VIDC-info .video .modal-box {
-    width: 50%;
+    width: 75%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2298,6 +2395,7 @@ table {
     width: 100%;
   }
   .abt-VIDC .VIDC-info .video .modal-content {
+    width: 100%;
     background-color: #fff;
     padding: 20px;
     width: 100%;
@@ -2329,8 +2427,8 @@ table {
     font-size: .875rem;
   }
   .abt-VIDC .VIDC-info .video .modal .videoDisplay {
-    width: 240px;
-    height: 130px;
+    width: 100%;
+    height: 150px;
   }
   .abt-VIDC .VIDC-info .abt-info h3 {
     font-size: 1.25rem;

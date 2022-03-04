@@ -214,11 +214,11 @@
                     @include modal-box;
                 }
                 &-content{
-                   @include modal-content;
+                   @include modal-content;width: 100%;
                     
                 }
-                .videoDisplay{
-                    width: 500px;height: 280px;
+                .videoDisplay{display: block;margin: auto;
+                    width: 100%;height: 280px;  
                 }
             }
         }
@@ -330,6 +330,26 @@
 }
 // Footer Section End
 
+// Scroll To Top Btn
+
+
+.scroll-top-btn{
+    position: fixed; right: -100px; bottom: 20px;
+    background-color: rgba($green-color, 1);
+    padding: 10px 10px; border-radius: 50%;
+    transition: .5s; z-index: 100000000;
+    box-shadow: 0 0 5px rgba($black, .4);
+    .fa-solid{font-size: 1.375rem;color: $white-color;}
+
+    &.show{
+        right: 20px;
+    }
+}
+
+
+
+
+
 
 // Media Query
 
@@ -438,7 +458,7 @@
                         
                     }
                     .videoDisplay{
-                        width: 400px;height: 220px;
+                        width: 100%;height: 280px;
                     }
                 }
             }
@@ -626,7 +646,7 @@
                         
                     }
                     .videoDisplay{
-                        width: 400px;height: 220px;
+                        width: 100%;height: 220px;
                     }
                 }
             }
@@ -709,10 +729,10 @@
                 .modal{
                     @include modal;
                     &-box{
-                        @include modal-box;width: 75%;
+                        @include modal-box;width: 90%;
                     }
                     &-content{
-                       @include modal-content; width: 100%;
+                       @include modal-content;
                        .head{
                         .heading{font-size: 1rem;}
                         .dismis{font-size: 1rem;}
@@ -720,7 +740,7 @@
                         
                     }
                     .videoDisplay{
-                        width: 360px;height: 170px;
+                        width: 100%;height: 200px;
                     }
                 }
             }
@@ -853,6 +873,23 @@
                         .fa-play{font-size: 1rem;padding: 12px;}
                     }
                 }
+                .modal{
+                    @include modal;
+                    &-box{
+                        @include modal-box;width: 100%;
+                    }
+                    &-content{
+                       @include modal-content;
+                       .head{
+                        .heading{font-size: 1rem;}
+                        .dismis{font-size: 1rem;}
+                       }
+                        
+                    }
+                    .videoDisplay{
+                        width: 100%;height: 150px;
+                    }
+                }
             }
             .abt-info{margin-top: 10px;
                 h3{font-size: 1.25rem;margin :10px  0;}
@@ -904,7 +941,7 @@
                         
                     }
                     .videoDisplay{
-                        width: 240px;height: 130px;
+                        width: 100%;height: 150px;
                     }
                 }
             }

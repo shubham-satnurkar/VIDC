@@ -10,7 +10,20 @@ $(document).ready(function(){
         // }
         if(window.innerWidth == 768 || window.innerWidth == 770)
         location.reload();
-    })
+    });
+
+    // Scrollspy
+    var $scrollspy=$("#scrollspy");
+    let $target =$("#manage-dev")
+    function scrollToAnchor($arrow){
+        // var $arrow=$(".arrow");
+        $('html,body').animate({scrollTop: $arrow.offset().top },'500');
+    }
+    $scrollspy.click(function() {
+       scrollToAnchor($target);
+    });
+
+
 
     // Onclick Search Bar Modal Show
     let $search = $("#searchBtn");
@@ -33,10 +46,7 @@ $(document).ready(function(){
         console.log("close")
     });
 
-
-
-
-    
+ 
     //Onclick Video Modal Show
     let $show = $(".show-modal")
     let $dismis = $("#dismis");
@@ -57,6 +67,27 @@ $(document).ready(function(){
         location.reload()
         console.log("close")
     });
+
+
+    // Bottom To top SCroll button animation
+        // Bottom to top scroll btn animation
+        var scrBtn = $('.scroll-top-btn');
+        $(window).scroll(function () {
+          if ($(window).scrollTop() > 200) {
+            scrBtn.addClass('show');
+          }
+          else {
+            scrBtn.removeClass('show');
+          }
+        });
+        scrBtn.on('click', function (e) {
+          e.preventDefault();
+          $('html, body').animate({
+            scrollTop: 0
+          }, 1000)
+        })
+
+
 
 
     
