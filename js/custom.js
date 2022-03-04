@@ -105,8 +105,7 @@ let emailNode = document.getElementById("email");
 let errorNode = document.getElementById("error");
 let border1 = "1px solid #f00";
 let border2 = "1px solid #0f0";
-let form = document.querySelector(".form");
-
+let form = document.getElementById("form");
 function validate(){
     errorNode.textContent = "";
     let email = emailNode.value;
